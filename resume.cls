@@ -84,32 +84,32 @@
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+\newcommand{\email}[1]{ \href{mailto:#1}{#1}} %\faEnvelope\
 % defines one's phone
 % usage: \phone{<phone>}
-\newcommand{\phone}[1]{\faPhone\ {#1}}
+\newcommand{\phone}[1]{ {#1}} %\faPhone\
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
-\newcommand{\linkedin}[2][]{\faLinkedin\ 
+\newcommand{\linkedin}[2][]{
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}
-\newcommand{\linkedinsquare}[2][]{\faLinkedinSquare\ 
+    {\href{#2}{#1}}}%\faLinkedin\ 
+\newcommand{\linkedinsquare}[2][]{
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}
+    {\href{#2}{#1}}}%\faLinkedinSquare\ 
 % defines one's GitHub
 % usage: \github{<github>}
-\newcommand{\github}[2][]{\faGithub\ 
+\newcommand{\github}[2][]{ 
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}
+    {\href{#2}{#1}}}%\faGithub\
 % defines one's homepage
 % usage: \homepage{<homepage>}
-\newcommand{\homepage}[2][]{\faLink\ 
+\newcommand{\homepage}[2][]{
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}
+    {\href{#2}{#1}}}%\faLink\ 
 
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
