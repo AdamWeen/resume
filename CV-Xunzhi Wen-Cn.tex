@@ -9,43 +9,54 @@
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
-
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{progressbar}
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
+\begin{table}
+  \centering
+  \Large{
+  \begin{tabu}{ c }
+    \centering
+    \textbf{\huge{闻逊之}}   \\
+    \email{wenxunzhi1@163.com} | \phone{(+86) 173-0552-7206} \\
+  \end{tabu}
+}
+\end{table}
 
-\name{你的大名}
+\vspace{2pt}
+\section{教育背景}
+\datedsubsection{\textbf{西安交通大学} \texorpdfstring{\quad} GPA:3.72/4.0}{西安}
+\textit{在读本科生} \quad 信息与计算科学 \hfill{2019.08 -- 至今}
 
-\basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
- 
-\section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+相关课程：抽象代数，偏微分方程，泛函分析，实变函数，数理统计，数值分析，复变函数
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
+\textbf{获奖情况}
 \begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
+  \item \textit{一等奖}，腾飞杯创新创业大赛（56/572）\hfill 2021
+  \item \textit{荣誉提名}，美国大学生数学建模竞赛 （30\%）\hfill 2021,2022
+  \item \textit{三等校级奖学金} （10/37） \hfill 2020,2021
+  \item \textit{优秀志愿者}，中国模拟联合国大会（10/150） \hfill 2019
 \end{itemize}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
-\begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
+\section{科研经历}
+\datedsubsection{\textbf{预期诱导的亚稳态活动建模}}{西安}
+\role{研究助理}{指导教师：黄子罡教授，博士生导师，生命科学与技术学院\hfill 2021.06 -- 2022.05}
+
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+  \item 将平均场理论用于描述有输入下模型运行时网络行为的全局状态和势能状态及相关参数值
+  \item 定义了序列熵、决策敏感度、延迟解码时间等一系列模型评价指标
+  \item 调整了模型参数，并在不同刺激输入下获得了清晰的亚稳态图像
+  \item 使用多种刺激的组合测试模型，并破译了稳态图像含义
 \end{itemize}
-\end{onehalfspacing}
+
+\datedsubsection{\textbf{农村农业合作社实地调查与政策分析}}{西安、蚌埠}
+\role{课题组长}{指导教师：李聪教授，博士生导师，西安交通大学经济与金融学院\hfill 2020.06 -- 2021.04}
+\begin{itemize}
+  \item 针对问题背景进行了充分的调研
+\end{itemize}
 
 \datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
 \role{\LaTeX, Python}{个人项目}
@@ -65,7 +76,7 @@ xxx后端开发
 %  \item main contribution
 %\end{itemize}
 
-\section{\faCogs\ IT 技能}
+\section{IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 编程语言: C == Python > C++ > Java
@@ -73,11 +84,8 @@ xxx后端开发
   \item 开发: xxx
 \end{itemize}
 
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
 
-\section{\faInfo\ 其他}
+\section{其他}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
   \item 技术博客: http://blog.yours.me
