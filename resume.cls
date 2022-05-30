@@ -43,8 +43,8 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
 %\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
+\setlist[itemize]{topsep=-0.5em, leftmargin=1.5pc}
+\setlist[enumerate]{topsep=0em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
@@ -84,32 +84,32 @@
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{ \href{mailto:#1}{#1}} %\faEnvelope\
+\newcommand{\email}[1]{ \href{mailto:#1}{#1}}% \faEnvelope\  邮件图标，如需要可以加在\href前面
 % defines one's phone
 % usage: \phone{<phone>}
-\newcommand{\phone}[1]{ {#1}} %\faPhone\
+\newcommand{\phone}[1]{{#1}} %\faPhone\ 同上
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
 \newcommand{\linkedin}[2][]{
-  \ifthenelse{\isempty{#1}}%
+  \ifthenelse{\isempty{#1}}% \faLinkedin\ 同上
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}%\faLinkedin\ 
+    {\href{#2}{#1}}}
 \newcommand{\linkedinsquare}[2][]{
-  \ifthenelse{\isempty{#1}}%
+  \ifthenelse{\isempty{#1}}%\faLinkedinSquare\ 同上
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}%\faLinkedinSquare\ 
+    {\href{#2}{#1}}}
 % defines one's GitHub
 % usage: \github{<github>}
-\newcommand{\github}[2][]{ 
-  \ifthenelse{\isempty{#1}}%
+\newcommand{\github}[2][]{
+  \ifthenelse{\isempty{#1}}%\faGithub\ 同上
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}%\faGithub\
+    {\href{#2}{#1}}}
 % defines one's homepage
 % usage: \homepage{<homepage>}
 \newcommand{\homepage}[2][]{
-  \ifthenelse{\isempty{#1}}%
+  \ifthenelse{\isempty{#1}}%\faLink\ 同上
     {\href{#2}{#2}}
-    {\href{#2}{#1}}}%\faLink\ 
+    {\href{#2}{#1}}}
 
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
@@ -118,5 +118,5 @@
 
 \newcommand{\role}[2]{
   {\par \textit{#1} ~ #2 \par}
-  \vspace{0.85ex}
+  \vspace{0ex}%调整\role指令的段后间距
 }
